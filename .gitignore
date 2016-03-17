@@ -45,3 +45,37 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#ignore specificity dirs
+/OneKey/OneKey/Debug
+/OneKey/OneKey/Release
+/OneKey/OneKey/bin
+/OneKey/OneKey/obj
+/DataUtil/DataUtil/Debug
+/DataUtil/DataUtil/Release
+/DataUtil/DataUtil/bin
+/DataUtil/DataUtil/obj
+/Debug
+/Release
+/bin
+/obj
+#VisualStudio temp files
+*.obj
+*.user
+*.sdf
+*.opensdf
+*.suo
+*.ipch
+*.tlog
+*.pdb
+*.error
+*.ilk
+*.res
+*cache
+*.manifest
+*.log
+*.exe
+*.lastbuildstate
+*.idb
+*.pch
+*_manifest.rc
