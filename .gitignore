@@ -47,10 +47,12 @@ Temporary Items
 .apdisk
 
 #ignore specificity dirs
-/OneKey/OneKey/Debug
-/OneKey/OneKey/Release
+/OneKey/OneKey/bin/Debug
+/OneKey/OneKey/bin/Release
 /OneKey/OneKey/bin
 /OneKey/OneKey/obj
+/OneKey/OneKey/obj/Debug
+/OneKey/OneKey/obj/Release
 /DataUtil/DataUtil/Debug
 /DataUtil/DataUtil/Release
 /DataUtil/DataUtil/bin
@@ -71,7 +73,7 @@ Temporary Items
 *.error
 *.ilk
 *.res
-*cache
+*.cache
 *.manifest
 *.log
 *.exe
