@@ -43,9 +43,9 @@ namespace OneKey
             this.tbID = new System.Windows.Forms.TextBox();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.pnlErro = new System.Windows.Forms.Panel();
-            this.lblErro = new System.Windows.Forms.Label();
-            this.lblErroMsg = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
+            this.lblErroMsg = new System.Windows.Forms.Label();
+            this.lblErro = new System.Windows.Forms.Label();
             this.pnlErro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +57,7 @@ namespace OneKey
             this.lblOneKey.BackColor = System.Drawing.Color.Transparent;
             this.lblOneKey.Font = new System.Drawing.Font("Segoe UI Light", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
             this.lblOneKey.ForeColor = System.Drawing.Color.White;
-            this.lblOneKey.Location = new System.Drawing.Point(356, 205);
+            this.lblOneKey.Location = new System.Drawing.Point(364, 202);
             this.lblOneKey.Name = "lblOneKey";
             this.lblOneKey.Size = new System.Drawing.Size(254, 81);
             this.lblOneKey.TabIndex = 0;
@@ -76,7 +76,7 @@ namespace OneKey
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI Light", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(367, 476);
+            this.btnLogin.Location = new System.Drawing.Point(396, 476);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(73, 36);
             this.btnLogin.TabIndex = 1;
@@ -96,22 +96,21 @@ namespace OneKey
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.Font = new System.Drawing.Font("Segoe UI Light", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
             this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(496, 476);
+            this.btnRegister.Location = new System.Drawing.Point(512, 476);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(98, 36);
+            this.btnRegister.Size = new System.Drawing.Size(106, 36);
             this.btnRegister.TabIndex = 2;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("SimSun", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(456, 476);
+            this.label1.Location = new System.Drawing.Point(475, 476);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 35);
+            this.label1.Size = new System.Drawing.Size(31, 35);
             this.label1.TabIndex = 3;
             this.label1.Text = "|";
             // 
@@ -120,7 +119,7 @@ namespace OneKey
             this.lblLogo.BackColor = System.Drawing.Color.Transparent;
             this.lblLogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblLogo.Image = ((System.Drawing.Image)(resources.GetObject("lblLogo.Image")));
-            this.lblLogo.Location = new System.Drawing.Point(376, 9);
+            this.lblLogo.Location = new System.Drawing.Point(394, 9);
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.Size = new System.Drawing.Size(202, 207);
             this.lblLogo.TabIndex = 4;
@@ -130,7 +129,7 @@ namespace OneKey
             this.tbID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbID.Font = new System.Drawing.Font("Segoe UI Light", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
             this.tbID.ForeColor = System.Drawing.Color.Silver;
-            this.tbID.Location = new System.Drawing.Point(378, 326);
+            this.tbID.Location = new System.Drawing.Point(396, 326);
             this.tbID.Name = "tbID";
             this.tbID.Size = new System.Drawing.Size(200, 20);
             this.tbID.TabIndex = 5;
@@ -142,7 +141,7 @@ namespace OneKey
             this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPassword.Font = new System.Drawing.Font("Segoe UI Light", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
             this.tbPassword.ForeColor = System.Drawing.Color.Silver;
-            this.tbPassword.Location = new System.Drawing.Point(378, 396);
+            this.tbPassword.Location = new System.Drawing.Point(396, 394);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(200, 20);
             this.tbPassword.TabIndex = 6;
@@ -161,28 +160,6 @@ namespace OneKey
             this.pnlErro.TabIndex = 7;
             this.pnlErro.Visible = false;
             // 
-            // lblErro
-            // 
-            this.lblErro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblErro.Font = new System.Drawing.Font("Segoe UI Light", 70F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
-            this.lblErro.ForeColor = System.Drawing.Color.BlueViolet;
-            this.lblErro.Location = new System.Drawing.Point(306, 0);
-            this.lblErro.Name = "lblErro";
-            this.lblErro.Size = new System.Drawing.Size(349, 100);
-            this.lblErro.TabIndex = 0;
-            this.lblErro.Text = "Login Erro";
-            // 
-            // lblErroMsg
-            // 
-            this.lblErroMsg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblErroMsg.Font = new System.Drawing.Font("Segoe UI Semilight", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
-            this.lblErroMsg.ForeColor = System.Drawing.Color.Black;
-            this.lblErroMsg.Location = new System.Drawing.Point(188, 100);
-            this.lblErroMsg.Name = "lblErroMsg";
-            this.lblErroMsg.Size = new System.Drawing.Size(568, 49);
-            this.lblErroMsg.TabIndex = 1;
-            this.lblErroMsg.Text = "Please Check Your LoginID Or Password";
-            // 
             // btnOK
             // 
             this.btnOK.BackColor = System.Drawing.Color.Transparent;
@@ -199,6 +176,28 @@ namespace OneKey
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
+            // lblErroMsg
+            // 
+            this.lblErroMsg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblErroMsg.Font = new System.Drawing.Font("Segoe UI Semilight", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.lblErroMsg.ForeColor = System.Drawing.Color.Black;
+            this.lblErroMsg.Location = new System.Drawing.Point(188, 100);
+            this.lblErroMsg.Name = "lblErroMsg";
+            this.lblErroMsg.Size = new System.Drawing.Size(568, 49);
+            this.lblErroMsg.TabIndex = 1;
+            this.lblErroMsg.Text = "Please Check Your LoginID Or Password";
+            // 
+            // lblErro
+            // 
+            this.lblErro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblErro.Font = new System.Drawing.Font("Segoe UI Light", 70F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.lblErro.ForeColor = System.Drawing.Color.BlueViolet;
+            this.lblErro.Location = new System.Drawing.Point(306, 0);
+            this.lblErro.Name = "lblErro";
+            this.lblErro.Size = new System.Drawing.Size(349, 100);
+            this.lblErro.TabIndex = 0;
+            this.lblErro.Text = "Login Erro";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -208,13 +207,13 @@ namespace OneKey
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(980, 610);
             this.Controls.Add(this.pnlErro);
-            this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbID);
-            this.Controls.Add(this.lblLogo);
+            this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblOneKey);
+            this.Controls.Add(this.lblLogo);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
