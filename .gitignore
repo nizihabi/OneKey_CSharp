@@ -81,3 +81,4 @@ Temporary Items
 *.idb
 *.pch
 *_manifest.rc
+*.Cache
