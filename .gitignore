@@ -82,3 +82,7 @@ Temporary Items
 *.pch
 *_manifest.rc
 *.Cache
+*.exe
+*.Cache
+*.exe
+*.pdb
