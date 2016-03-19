@@ -28,29 +28,121 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.labID = new System.Windows.Forms.Label();
+            this.tbID = new System.Windows.Forms.TextBox();
+            this.lblPwd = new System.Windows.Forms.Label();
+            this.tbPwd = new System.Windows.Forms.TextBox();
+            this.lblConfirm = new System.Windows.Forms.Label();
+            this.tbConfirm = new System.Windows.Forms.TextBox();
+            this.btnReg = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // labID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Light", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
-            this.label1.ForeColor = System.Drawing.Color.BlueViolet;
-            this.label1.Location = new System.Drawing.Point(31, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 35);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID";
+            this.labID.AutoSize = true;
+            this.labID.Font = new System.Drawing.Font("Segoe UI Light", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.labID.ForeColor = System.Drawing.Color.BlueViolet;
+            this.labID.Location = new System.Drawing.Point(45, 46);
+            this.labID.Name = "labID";
+            this.labID.Size = new System.Drawing.Size(99, 35);
+            this.labID.TabIndex = 0;
+            this.labID.Text = "User ID";
+            // 
+            // tbID
+            // 
+            this.tbID.Font = new System.Drawing.Font("Segoe UI Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.tbID.Location = new System.Drawing.Point(143, 48);
+            this.tbID.Name = "tbID";
+            this.tbID.Size = new System.Drawing.Size(208, 34);
+            this.tbID.TabIndex = 1;
+            // 
+            // lblPwd
+            // 
+            this.lblPwd.AutoSize = true;
+            this.lblPwd.Font = new System.Drawing.Font("Segoe UI Light", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.lblPwd.ForeColor = System.Drawing.Color.BlueViolet;
+            this.lblPwd.Location = new System.Drawing.Point(25, 108);
+            this.lblPwd.Name = "lblPwd";
+            this.lblPwd.Size = new System.Drawing.Size(120, 35);
+            this.lblPwd.TabIndex = 2;
+            this.lblPwd.Text = "Password";
+            // 
+            // tbPwd
+            // 
+            this.tbPwd.Font = new System.Drawing.Font("Segoe UI Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.tbPwd.Location = new System.Drawing.Point(143, 108);
+            this.tbPwd.Name = "tbPwd";
+            this.tbPwd.Size = new System.Drawing.Size(208, 34);
+            this.tbPwd.TabIndex = 3;
+            // 
+            // lblConfirm
+            // 
+            this.lblConfirm.AutoSize = true;
+            this.lblConfirm.Font = new System.Drawing.Font("Segoe UI Light", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.lblConfirm.ForeColor = System.Drawing.Color.BlueViolet;
+            this.lblConfirm.Location = new System.Drawing.Point(34, 168);
+            this.lblConfirm.Name = "lblConfirm";
+            this.lblConfirm.Size = new System.Drawing.Size(106, 35);
+            this.lblConfirm.TabIndex = 4;
+            this.lblConfirm.Text = "Confirm";
+            // 
+            // tbConfirm
+            // 
+            this.tbConfirm.Font = new System.Drawing.Font("Segoe UI Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.tbConfirm.Location = new System.Drawing.Point(143, 170);
+            this.tbConfirm.Name = "tbConfirm";
+            this.tbConfirm.Size = new System.Drawing.Size(208, 34);
+            this.tbConfirm.TabIndex = 5;
+            // 
+            // btnReg
+            // 
+            this.btnReg.BackColor = System.Drawing.Color.White;
+            this.btnReg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReg.FlatAppearance.BorderSize = 0;
+            this.btnReg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReg.Font = new System.Drawing.Font("Segoe UI Light", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.btnReg.ForeColor = System.Drawing.Color.BlueViolet;
+            this.btnReg.Location = new System.Drawing.Point(143, 248);
+            this.btnReg.Name = "btnReg";
+            this.btnReg.Size = new System.Drawing.Size(145, 49);
+            this.btnReg.TabIndex = 6;
+            this.btnReg.Text = "Register";
+            this.btnReg.UseVisualStyleBackColor = false;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.White;
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Light", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.btnCancel.ForeColor = System.Drawing.Color.BlueViolet;
+            this.btnCancel.Location = new System.Drawing.Point(143, 318);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(145, 49);
+            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(400, 610);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(450, 420);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnReg);
+            this.Controls.Add(this.tbConfirm);
+            this.Controls.Add(this.lblConfirm);
+            this.Controls.Add(this.tbPwd);
+            this.Controls.Add(this.lblPwd);
+            this.Controls.Add(this.tbID);
+            this.Controls.Add(this.labID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegisterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "RegisterForm";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -59,6 +151,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labID;
+        private System.Windows.Forms.TextBox tbID;
+        private System.Windows.Forms.Label lblPwd;
+        private System.Windows.Forms.TextBox tbPwd;
+        private System.Windows.Forms.Label lblConfirm;
+        private System.Windows.Forms.TextBox tbConfirm;
+        private System.Windows.Forms.Button btnReg;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

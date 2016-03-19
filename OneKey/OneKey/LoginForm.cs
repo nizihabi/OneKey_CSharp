@@ -17,6 +17,8 @@ namespace OneKey
         private Point m_MousePoint;
         private Point m_LastPoint;
 
+        private RegisterForm m_Register; //注册窗口
+
         public LoginForm()
         {
             InitializeComponent();
@@ -88,7 +90,7 @@ namespace OneKey
             User.GetInstance().ID = this.tbID.Text;
             User.GetInstance().Password = this.tbPassword.Text;
 
-            if(checkLoginMsg(User.GetInstance().ID,User.GetInstance().Password) == false)
+            if(GlobleManager.CheckLogin(User.GetInstance().ID,User.GetInstance().Password) == false)
             {
                 this.pnlErro.Visible = true;
                 this.tbID.Enabled = false;
@@ -98,32 +100,22 @@ namespace OneKey
 
         }
 
-        /// <summary>
-        /// 检查用户是否存在
-        /// </summary>
-        /// <param name="id">用户id</param>
-        /// <returns></returns>
-        private bool isUserExist(string id)
-        {
-            return true;
-        }
-
-        /// <summary>
-        /// 检查登陆信息
-        /// </summary>
-        /// <param name="id">用户id</param>
-        /// <param name="pwd">用户密码</param>
-        /// <returns></returns>
-        private bool checkLoginMsg(string id,string pwd)
-        {
-            return false;
-        }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
             this.pnlErro.Visible = false;
             this.tbID.Enabled = true;
             this.tbPassword.Enabled = true;
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            m_Register = new RegisterForm(this);
+            int Xoffset = (this.Size.Width - m_Register.Size.Width) / 2;
+            int Yoffset = (this.Size.Height - m_Register.Size.Height) / 2;
+            m_Register.Location = new Point(this.Location.X + Xoffset, this.Location.Y + Yoffset);
+            m_Register.Show();
+            this.Enabled = false;
         }
 
     }

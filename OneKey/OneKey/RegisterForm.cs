@@ -11,9 +11,18 @@ namespace OneKey
 {
     public partial class RegisterForm : Form
     {
-        public RegisterForm()
+        Form parentForm;
+
+        public RegisterForm(Form Parent)
         {
             InitializeComponent();
+            parentForm = Parent;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.parentForm.Enabled = true;
+            this.Close();
         }
     }
 }
