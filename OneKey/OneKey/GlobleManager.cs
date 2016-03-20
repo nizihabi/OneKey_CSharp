@@ -20,7 +20,7 @@ namespace OneKey
         /// <returns>true——ID存在，false——ID不存在</returns>
         public static bool CheckIDExist(string id)
         {
-            return true;
+            return false;
         }
 
         /// <summary>
@@ -31,7 +31,7 @@ namespace OneKey
         /// <returns></returns>
         public static bool CheckLogin(string id, string pwd)
         {
-            return true;
+            return false;
         }
     }
 }

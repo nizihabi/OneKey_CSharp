@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.labID = new System.Windows.Forms.Label();
             this.tbID = new System.Windows.Forms.TextBox();
             this.lblPwd = new System.Windows.Forms.Label();
@@ -42,7 +43,7 @@
             // 
             this.labID.AutoSize = true;
             this.labID.Font = new System.Drawing.Font("Segoe UI Light", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
-            this.labID.ForeColor = System.Drawing.Color.BlueViolet;
+            this.labID.ForeColor = System.Drawing.Color.Black;
             this.labID.Location = new System.Drawing.Point(45, 46);
             this.labID.Name = "labID";
             this.labID.Size = new System.Drawing.Size(99, 35);
@@ -61,7 +62,7 @@
             // 
             this.lblPwd.AutoSize = true;
             this.lblPwd.Font = new System.Drawing.Font("Segoe UI Light", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
-            this.lblPwd.ForeColor = System.Drawing.Color.BlueViolet;
+            this.lblPwd.ForeColor = System.Drawing.Color.Black;
             this.lblPwd.Location = new System.Drawing.Point(25, 108);
             this.lblPwd.Name = "lblPwd";
             this.lblPwd.Size = new System.Drawing.Size(120, 35);
@@ -80,7 +81,7 @@
             // 
             this.lblConfirm.AutoSize = true;
             this.lblConfirm.Font = new System.Drawing.Font("Segoe UI Light", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
-            this.lblConfirm.ForeColor = System.Drawing.Color.BlueViolet;
+            this.lblConfirm.ForeColor = System.Drawing.Color.Black;
             this.lblConfirm.Location = new System.Drawing.Point(34, 168);
             this.lblConfirm.Name = "lblConfirm";
             this.lblConfirm.Size = new System.Drawing.Size(106, 35);
@@ -102,7 +103,8 @@
             this.btnReg.FlatAppearance.BorderSize = 0;
             this.btnReg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReg.Font = new System.Drawing.Font("Segoe UI Light", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
-            this.btnReg.ForeColor = System.Drawing.Color.BlueViolet;
+            this.btnReg.ForeColor = System.Drawing.Color.Black;
+            this.btnReg.Image = ((System.Drawing.Image)(resources.GetObject("btnReg.Image")));
             this.btnReg.Location = new System.Drawing.Point(143, 248);
             this.btnReg.Name = "btnReg";
             this.btnReg.Size = new System.Drawing.Size(145, 49);
@@ -117,7 +119,7 @@
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Light", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
-            this.btnCancel.ForeColor = System.Drawing.Color.BlueViolet;
+            this.btnCancel.ForeColor = System.Drawing.Color.Black;
             this.btnCancel.Location = new System.Drawing.Point(143, 318);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(145, 49);

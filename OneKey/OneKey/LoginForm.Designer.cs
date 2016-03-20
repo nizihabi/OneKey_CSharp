@@ -213,8 +213,8 @@ namespace OneKey
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.lblOneKey);
             this.Controls.Add(this.lblLogo);
+            this.Controls.Add(this.lblOneKey);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
