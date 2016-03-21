@@ -46,6 +46,7 @@ namespace OneKey
             this.btnOK = new System.Windows.Forms.Button();
             this.lblErroMsg = new System.Windows.Forms.Label();
             this.lblErro = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.pnlErro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -199,6 +200,20 @@ namespace OneKey
             this.lblErro.TabIndex = 0;
             this.lblErro.Text = "Login Erro";
             // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(948, 5);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(20, 20);
+            this.btnClose.TabIndex = 8;
+            this.btnClose.TabStop = false;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -207,6 +222,7 @@ namespace OneKey
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(980, 610);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pnlErro);
             this.Controls.Add(this.tbID);
             this.Controls.Add(this.tbPassword);
@@ -238,6 +254,7 @@ namespace OneKey
         private Label lblErroMsg;
         private Label lblErro;
         private Button btnOK;
+        private Button btnClose;
 
     }
 }

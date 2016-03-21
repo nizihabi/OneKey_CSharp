@@ -27,16 +27,6 @@ namespace OneKey
             tbPasswordFirstFocuse = true;
         }
 
-        private void tbID_Enter(object sender, EventArgs e)
-        {
-            this.tbID.ForeColor = Color.Black;
-            if (tbIDFirstFocuse)
-            {
-                this.tbID.Text = "";
-                tbIDFirstFocuse = false;
-            }
-                
-        }
 
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -46,21 +36,8 @@ namespace OneKey
                 this.Close();
             }
 
-           // return true;
-            return base.ProcessCmdKey(ref msg, keyData); 
-        }
-
-        private void tbPassword_Enter(object sender, EventArgs e)
-        {
-            this.tbPassword.ForeColor = Color.Black;
-            this.tbPassword.UseSystemPasswordChar = true;
-            if (tbPasswordFirstFocuse)
-            {
-                this.tbPassword.Text = "";
-                tbPasswordFirstFocuse = false;
-
-            }
-                
+            // return true;
+            return base.ProcessCmdKey(ref msg, keyData);
         }
 
         protected override void OnMouseDown(MouseEventArgs e)
@@ -83,6 +60,32 @@ namespace OneKey
                 this.Location = l;
             }
         }
+
+
+        private void tbID_Enter(object sender, EventArgs e)
+        {
+            this.tbID.ForeColor = Color.Black;
+            if (tbIDFirstFocuse)
+            {
+                this.tbID.Text = "";
+                tbIDFirstFocuse = false;
+            }
+                
+        }
+
+        private void tbPassword_Enter(object sender, EventArgs e)
+        {
+            this.tbPassword.ForeColor = Color.Black;
+            this.tbPassword.UseSystemPasswordChar = true;
+            if (tbPasswordFirstFocuse)
+            {
+                this.tbPassword.Text = "";
+                tbPasswordFirstFocuse = false;
+
+            }
+                
+        }
+
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -116,6 +119,11 @@ namespace OneKey
             m_Register.Location = new Point(this.Location.X + Xoffset, this.Location.Y + Yoffset);
             m_Register.Show();
             this.Enabled = false;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
     }

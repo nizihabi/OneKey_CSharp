@@ -32,8 +32,8 @@
             this.lblLine01 = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.pnlMsg = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblType = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlMsg.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,15 +62,6 @@
             this.pnlMsg.Size = new System.Drawing.Size(800, 530);
             this.pnlMsg.TabIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.Location = new System.Drawing.Point(235, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(14, 437);
-            this.label1.TabIndex = 1;
-            // 
             // lblType
             // 
             this.lblType.BackColor = System.Drawing.Color.Black;
@@ -82,6 +73,15 @@
             this.lblType.TabIndex = 2;
             this.lblType.Text = "Type";
             this.lblType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
+            this.label1.Location = new System.Drawing.Point(235, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(14, 437);
+            this.label1.TabIndex = 1;
             // 
             // MainForm
             // 
