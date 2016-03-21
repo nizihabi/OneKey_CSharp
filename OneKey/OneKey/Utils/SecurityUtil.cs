@@ -38,7 +38,7 @@ namespace DataUtil
         /// <param name="str">要加密的字符串</param>
         /// <param name="encryptKey">密钥</param>
         /// <returns>加密后的字符串</returns>
-        static string EncryptByDES(string str, string encryptKey)  
+        public static string EncryptByDES(string str, string encryptKey)  
         {    
             DESCryptoServiceProvider descsp = new DESCryptoServiceProvider(); 
             byte[] key = Encoding.Unicode.GetBytes(encryptKey);  
@@ -57,7 +57,7 @@ namespace DataUtil
         /// <param name="str">要解密的字符串</param> 
         /// /// <param name="encryptKey">密钥</param>
         /// <returns>解密后的字符串</returns> 
-        static string DecryptByDES(string str, string encryptKey)  
+        public static string DecryptByDES(string str, string encryptKey)  
         {    
             DESCryptoServiceProvider descsp = new DESCryptoServiceProvider(); 
             byte[] key = Encoding.Unicode.GetBytes(encryptKey);   
@@ -75,7 +75,7 @@ namespace DataUtil
         /// <param name="str">要加密的字符串</param>
         /// <param name="encryptKey">密钥</param>
         /// <returns>加密后的字符串</returns>
-        static string AESEncryptByAES(string str, string encryptKey)
+        public static string AESEncryptByAES(string str, string encryptKey)
         {
             AesCryptoServiceProvider descsp = new AesCryptoServiceProvider();
             byte[] key = Encoding.Unicode.GetBytes(encryptKey);
@@ -94,7 +94,7 @@ namespace DataUtil
         /// <param name="str">要解密的字符串</param> 
         /// /// <param name="encryptKey">密钥</param>
         /// <returns>解密后的字符串</returns> 
-        static string AESDecryptByAES(string str, string encryptKey)
+        public static string AESDecryptByAES(string str, string encryptKey)
         {
             AesCryptoServiceProvider descsp = new AesCryptoServiceProvider();
             byte[] key = Encoding.Unicode.GetBytes(encryptKey);

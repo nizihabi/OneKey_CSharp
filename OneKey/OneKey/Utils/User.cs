@@ -5,6 +5,13 @@ using System.Text;
 
 namespace OneKey
 {
+
+    struct PwdInfo
+    {
+        string pwd;
+        string description;
+    }
+
     class User
     {
         public static User GetInstance()
@@ -47,5 +54,7 @@ namespace OneKey
                 m_password = value;
             }
         }
+
+        public Queue<PwdInfo> Pwds;
     }
 }

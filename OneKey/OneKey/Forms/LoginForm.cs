@@ -27,8 +27,7 @@ namespace OneKey
             tbPasswordFirstFocuse = true;
         }
 
-
-
+       
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == Keys.Escape)
@@ -90,10 +89,7 @@ namespace OneKey
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            User.GetInstance().ID = this.tbID.Text;
-            User.GetInstance().Password = this.tbPassword.Text;
-
-            if(GlobleManager.CheckLogin(User.GetInstance().ID,User.GetInstance().Password) == false)
+            if (GlobleManager.CheckLogin(this.tbID.Text, this.tbPassword.Text) == false)
             {
                 this.pnlErro.Visible = true;
                 this.tbID.Enabled = false;
