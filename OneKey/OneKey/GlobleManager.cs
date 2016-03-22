@@ -20,25 +20,16 @@ namespace OneKey
         public static void InitDatabase()
         {
             SQLUtil.CheckDataBaseExist();
-
-            string createTable = "";
-
-            if(!SQLUtil.IsExist("select * from tb_User"))
-            {
-                createTable = "create table tb_User(UserID nvarchar(50) not null primary key, Password nvarchar(50) not null);";
-                SQLUtil.ExecuteNoQuerySQL(createTable);
-            }
-
-            if (!SQLUtil.IsExist("select * from tb_PwdInfo"))
-            {
-                createTable = @"create table tb_PwdInfo(
+            string createTable = "create table if not exists tb_User(UserID nvarchar(50) not null primary key, Password nvarchar(50) not null);"; ;
+            SQLUtil.ExecuteNoQuerySQL(createTable);
+            createTable = @"create table if not exists tb_PwdInfo(
                                 Index int identity(1,1) primary key,
                                 UserID nvarchar(50) not null, 
                                 Pwds nvarchar(50) not null,
                                 Description nvarchar(200) null
                                 );";
-                SQLUtil.ExecuteNoQuerySQL(createTable);
-            }
+            SQLUtil.ExecuteNoQuerySQL(createTable);
+           
         }
 
         /// <summary>
