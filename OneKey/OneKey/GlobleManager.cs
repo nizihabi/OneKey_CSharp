@@ -20,7 +20,7 @@ namespace OneKey
         public static void InitDatabase()
         {
             SQLUtil.CheckDataBaseExist();
-            string createTable = "create table if not exists tb_User(UserID nvarchar(50) not null primary key, Password nvarchar(50) not null);"; ;
+            string createTable = "create table if not exists tb_User(UserID nvarchar(50) not null primary key, Password nvarchar(50) not null);"; 
             SQLUtil.ExecuteNoQuerySQL(createTable);
             createTable = @"create table if not exists tb_PwdInfo(
                                 Index int identity(1,1) primary key,
@@ -56,7 +56,7 @@ namespace OneKey
             if (SQLUtil.IsExist(cmd))
             {
                 User.GetInstance().ID = id;
-                User.GetInstance().Password = MD5Pwd;
+                User.GetInstance().Password = pwd;
 
                 return true;
             }
