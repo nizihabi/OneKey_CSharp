@@ -37,6 +37,8 @@
             this.tbConfirm = new System.Windows.Forms.TextBox();
             this.btnReg = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.lblIDErro = new System.Windows.Forms.Label();
+            this.lblPwdErro = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labID
@@ -63,7 +65,7 @@
             this.lblPwd.AutoSize = true;
             this.lblPwd.Font = new System.Drawing.Font("Segoe UI Light", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
             this.lblPwd.ForeColor = System.Drawing.Color.Black;
-            this.lblPwd.Location = new System.Drawing.Point(25, 108);
+            this.lblPwd.Location = new System.Drawing.Point(25, 144);
             this.lblPwd.Name = "lblPwd";
             this.lblPwd.Size = new System.Drawing.Size(120, 35);
             this.lblPwd.TabIndex = 2;
@@ -72,7 +74,7 @@
             // tbPwd
             // 
             this.tbPwd.Font = new System.Drawing.Font("Segoe UI Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
-            this.tbPwd.Location = new System.Drawing.Point(143, 108);
+            this.tbPwd.Location = new System.Drawing.Point(143, 144);
             this.tbPwd.Name = "tbPwd";
             this.tbPwd.Size = new System.Drawing.Size(208, 34);
             this.tbPwd.TabIndex = 3;
@@ -82,7 +84,7 @@
             this.lblConfirm.AutoSize = true;
             this.lblConfirm.Font = new System.Drawing.Font("Segoe UI Light", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
             this.lblConfirm.ForeColor = System.Drawing.Color.Black;
-            this.lblConfirm.Location = new System.Drawing.Point(34, 168);
+            this.lblConfirm.Location = new System.Drawing.Point(34, 204);
             this.lblConfirm.Name = "lblConfirm";
             this.lblConfirm.Size = new System.Drawing.Size(106, 35);
             this.lblConfirm.TabIndex = 4;
@@ -91,7 +93,7 @@
             // tbConfirm
             // 
             this.tbConfirm.Font = new System.Drawing.Font("Segoe UI Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
-            this.tbConfirm.Location = new System.Drawing.Point(143, 170);
+            this.tbConfirm.Location = new System.Drawing.Point(143, 206);
             this.tbConfirm.Name = "tbConfirm";
             this.tbConfirm.Size = new System.Drawing.Size(208, 34);
             this.tbConfirm.TabIndex = 5;
@@ -105,12 +107,13 @@
             this.btnReg.Font = new System.Drawing.Font("Segoe UI Light", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
             this.btnReg.ForeColor = System.Drawing.Color.Black;
             this.btnReg.Image = ((System.Drawing.Image)(resources.GetObject("btnReg.Image")));
-            this.btnReg.Location = new System.Drawing.Point(143, 248);
+            this.btnReg.Location = new System.Drawing.Point(143, 304);
             this.btnReg.Name = "btnReg";
             this.btnReg.Size = new System.Drawing.Size(145, 49);
             this.btnReg.TabIndex = 6;
             this.btnReg.Text = "Register";
             this.btnReg.UseVisualStyleBackColor = false;
+            this.btnReg.Click += new System.EventHandler(this.btnReg_Click);
             // 
             // btnCancel
             // 
@@ -120,7 +123,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Light", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(143, 318);
+            this.btnCancel.Location = new System.Drawing.Point(143, 359);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(145, 49);
             this.btnCancel.TabIndex = 7;
@@ -128,12 +131,36 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // lblIDErro
+            // 
+            this.lblIDErro.Font = new System.Drawing.Font("Segoe UI Light", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.lblIDErro.ForeColor = System.Drawing.Color.Red;
+            this.lblIDErro.Location = new System.Drawing.Point(138, 96);
+            this.lblIDErro.Name = "lblIDErro";
+            this.lblIDErro.Size = new System.Drawing.Size(213, 21);
+            this.lblIDErro.TabIndex = 8;
+            this.lblIDErro.Text = "UserID Has Existed";
+            this.lblIDErro.Visible = false;
+            // 
+            // lblPwdErro
+            // 
+            this.lblPwdErro.Font = new System.Drawing.Font("Segoe UI Light", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.lblPwdErro.ForeColor = System.Drawing.Color.Red;
+            this.lblPwdErro.Location = new System.Drawing.Point(138, 262);
+            this.lblPwdErro.Name = "lblPwdErro";
+            this.lblPwdErro.Size = new System.Drawing.Size(213, 21);
+            this.lblPwdErro.TabIndex = 9;
+            this.lblPwdErro.Text = "Password is Not Matched";
+            this.lblPwdErro.Visible = false;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(450, 420);
+            this.Controls.Add(this.lblPwdErro);
+            this.Controls.Add(this.lblIDErro);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnReg);
             this.Controls.Add(this.tbConfirm);
@@ -161,5 +188,7 @@
         private System.Windows.Forms.TextBox tbConfirm;
         private System.Windows.Forms.Button btnReg;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label lblIDErro;
+        private System.Windows.Forms.Label lblPwdErro;
     }
 }

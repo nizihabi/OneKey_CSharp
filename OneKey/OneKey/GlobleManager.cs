@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using DataUtil;
+using System.Data;
 
 namespace OneKey
 {
@@ -23,10 +24,18 @@ namespace OneKey
             string createTable = "create table if not exists tb_User(UserID nvarchar(50) not null primary key, Password nvarchar(50) not null);"; 
             SQLUtil.ExecuteNoQuerySQL(createTable);
             createTable = @"create table if not exists tb_PwdInfo(
-                                Index int identity(1,1) primary key,
+                                PwdID int identity(1,1) primary key,
                                 UserID nvarchar(50) not null, 
                                 Pwds nvarchar(50) not null,
-                                Description nvarchar(200) null
+                                Description nvarchar(200) null,
+                                Type int not null
+                                );";
+            SQLUtil.ExecuteNoQuerySQL(createTable);
+
+            createTable = @"create table if not exists tb_PwdType(
+                                TypeID int identity(1,1) primary key,
+                                TypeDes nvarchar(200) not null, 
+                                UserID nvarchar(50) not null,
                                 );";
             SQLUtil.ExecuteNoQuerySQL(createTable);
            
@@ -84,14 +93,57 @@ namespace OneKey
         /// </summary>
         /// <param name="pwd"></param>
         /// <param name="description"></param>
-        public static void AddPwd(string pwd , string description)
+        /// <returns></returns>
+        public static bool AddPwd(string pwd , string description, string TypeDes)
         {
+            int typeID = getTypeID(User.GetInstance().ID, TypeDes);
+            if (typeID == -1)
+                return false;
+
             string ecrPwd = SecurityUtil.AESEncryptByAES(pwd, User.GetInstance().Password);
-            string cmd = "instert into tb_PwdInfo(UserID,Pwds,Description) values ('" + User.GetInstance().ID
-                + "','" + ecrPwd + "','" + description + "')";
+            string cmd = "instert into tb_PwdInfo(UserID,Pwds,Description,Type) values ('" + User.GetInstance().ID
+                + "','" + ecrPwd + "','" + description + "','" + typeID + "')";
+            SQLUtil.ExecuteNoQuerySQL(cmd);
+            return true;
+        }
+
+        /// <summary>
+        /// 增加新的类型
+        /// </summary>
+        /// <param name="userID">用户ID</param>
+        /// <param name="typeDes">类型描述</param>
+        /// <returns></returns>
+        public static void AddType(string typeDes)
+        {
+            string cmd = "instert into tb_PwdType(TypeDes,UserID) values ('" + typeDes + "','" + User.GetInstance().ID + "')";
+
             SQLUtil.ExecuteNoQuerySQL(cmd);
         }
 
-        
+        /// <summary>
+        /// 加载用户定义的类型表
+        /// </summary>
+        /// <returns></returns>
+        public static DataTable LoadTypeData()
+        {
+            string cmd = "select TypeID,TypeDes from tb_PwdType where UserID='" + User.GetInstance().ID + "'";
+            DataTable dt = SQLUtil.ExecuteQuerySQL(cmd);
+
+            return dt;
+        }
+
+        /// <summary>
+        /// 检查类型是否存在
+        /// </summary>
+        /// <param name="typeDes">类型描述</param>
+        /// <returns>返回相应的TypeID,-1代表该类型不存在</returns>
+        private static int getTypeID(string userID, string typeDes)
+        {
+            string cmd = "select TypeID,TypeDes,UserID from tb_PwdType where TypeDes='" + typeDes + "' and UserID='" + userID + "'";
+            DataTable dt = SQLUtil.ExecuteQuerySQL(cmd);
+            if (dt == null)
+                return -1;
+            return Int32.Parse(dt.Rows[0]["TypeID"].ToString());
+        }
     }
 }

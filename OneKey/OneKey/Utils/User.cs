@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 
 namespace OneKey
 {
@@ -56,5 +57,6 @@ namespace OneKey
         }
 
         public Queue<PwdInfo> Pwds;
+        public DataTable dt;
     }
 }

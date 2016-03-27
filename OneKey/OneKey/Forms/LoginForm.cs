@@ -18,10 +18,12 @@ namespace OneKey
         private Point m_LastPoint;
 
         private RegisterForm m_Register; //注册窗口
+        private MainForm m_MainForm; //主窗口
 
         public LoginForm()
         {
             InitializeComponent();
+            GlobleManager.InitDatabase();
             this.Location =new Point(800,384);
             tbIDFirstFocuse = true;
             tbPasswordFirstFocuse = true;
@@ -89,14 +91,18 @@ namespace OneKey
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            if (GlobleManager.CheckLogin(this.tbID.Text, this.tbPassword.Text) == false)
-            {
-                this.pnlErro.Visible = true;
-                this.tbID.Enabled = false;
-                this.tbPassword.Enabled = false;
-            }
-
-
+            //if (GlobleManager.CheckLogin(this.tbID.Text, this.tbPassword.Text) == false)
+            //{
+            //    this.pnlErro.Visible = true;
+            //    this.tbID.Enabled = false;
+            //    this.tbPassword.Enabled = false;
+            //}
+            //else
+            //{
+            //    m_MainForm = new MainForm();
+            //    this.Close();
+            //}
+            label2.Text = tbPassword.Text;
         }
 
 
