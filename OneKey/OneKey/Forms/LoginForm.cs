@@ -18,7 +18,24 @@ namespace OneKey
         private Point m_LastPoint;
 
         private RegisterForm m_Register; //注册窗口
-        private MainForm m_MainForm; //主窗口
+
+        bool loginSuccess;
+        /// <summary>
+        /// 是否登陆成功
+        /// </summary>
+        public bool LoginSunccess
+        {
+            get { return loginSuccess; }
+        }
+
+        string password;
+        /// <summary>
+        /// 登陆密码
+        /// </summary>
+        public string Password
+        {
+            get { return password; }
+        }
 
         public LoginForm()
         {
@@ -27,6 +44,8 @@ namespace OneKey
             this.Location =new Point(800,384);
             tbIDFirstFocuse = true;
             tbPasswordFirstFocuse = true;
+            loginSuccess = false;
+            password = "";
         }
 
        
@@ -91,18 +110,19 @@ namespace OneKey
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            //if (GlobleManager.CheckLogin(this.tbID.Text, this.tbPassword.Text) == false)
-            //{
-            //    this.pnlErro.Visible = true;
-            //    this.tbID.Enabled = false;
-            //    this.tbPassword.Enabled = false;
-            //}
-            //else
-            //{
-            //    m_MainForm = new MainForm();
-            //    this.Close();
-            //}
-            label2.Text = tbPassword.Text;
+            if (GlobleManager.CheckLogin(this.tbID.Text, this.tbPassword.Text) == false)
+            {
+                this.pnlErro.Visible = true;
+                this.tbID.Enabled = false;
+                this.tbPassword.Enabled = false;
+            }
+            else
+            {
+                this.loginSuccess = true;
+                this.password = this.tbPassword.Text;
+                this.Close();
+            }
+            //label2.Text = tbPassword.Text;
         }
 
 

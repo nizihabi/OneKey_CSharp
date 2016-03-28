@@ -14,6 +14,8 @@ namespace OneKey
         private Point m_MousePoint;
         private Point m_LastPoint;
 
+        private string password;
+
         public MainForm()
         {
             InitializeComponent();
@@ -47,6 +49,18 @@ namespace OneKey
 
                 l.Offset(t.X - this.m_MousePoint.X, t.Y - this.m_MousePoint.Y);
                 this.Location = l;
+            }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            LoginForm login = new LoginForm();
+            login.ShowDialog();
+            if (!login.LoginSunccess)
+                this.Close();
+            else
+            {
+                this.password = login.Password;
             }
         }
 

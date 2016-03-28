@@ -78,6 +78,7 @@
             this.tbPwd.Name = "tbPwd";
             this.tbPwd.Size = new System.Drawing.Size(208, 34);
             this.tbPwd.TabIndex = 3;
+            this.tbPwd.UseSystemPasswordChar = true;
             // 
             // lblConfirm
             // 
@@ -97,6 +98,7 @@
             this.tbConfirm.Name = "tbConfirm";
             this.tbConfirm.Size = new System.Drawing.Size(208, 34);
             this.tbConfirm.TabIndex = 5;
+            this.tbConfirm.UseSystemPasswordChar = true;
             // 
             // btnReg
             // 

@@ -25,6 +25,9 @@ namespace DataUtil
         {
             if (!File.Exists(datasource))
             {
+                DirectoryInfo info = (new FileInfo(datasource)).Directory;
+                if(!info.Exists)
+                    info.Create();
                 SQLiteConnection.CreateFile(datasource);
             }
         }

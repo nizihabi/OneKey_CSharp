@@ -35,7 +35,7 @@ namespace OneKey
             createTable = @"create table if not exists tb_PwdType(
                                 TypeID int identity(1,1) primary key,
                                 TypeDes nvarchar(200) not null, 
-                                UserID nvarchar(50) not null,
+                                UserID nvarchar(50) not null
                                 );";
             SQLUtil.ExecuteNoQuerySQL(createTable);
            
@@ -83,7 +83,7 @@ namespace OneKey
         public static void RegisterUser(string id, string pwd)
         {
             string MD5Pwd = SecurityUtil.GetMD5Value(pwd);
-            string cmd = "instert into tb_User(UserID,Password) values ('" + id + "','" + MD5Pwd + "')";
+            string cmd = "insert into tb_User(UserID,Password) values ('" + id + "','" + MD5Pwd + "')";
             SQLUtil.ExecuteNoQuerySQL(cmd);
 
         }
@@ -101,7 +101,7 @@ namespace OneKey
                 return false;
 
             string ecrPwd = SecurityUtil.AESEncryptByAES(pwd, User.GetInstance().Password);
-            string cmd = "instert into tb_PwdInfo(UserID,Pwds,Description,Type) values ('" + User.GetInstance().ID
+            string cmd = "insert into tb_PwdInfo(UserID,Pwds,Description,Type) values ('" + User.GetInstance().ID
                 + "','" + ecrPwd + "','" + description + "','" + typeID + "')";
             SQLUtil.ExecuteNoQuerySQL(cmd);
             return true;
@@ -115,7 +115,7 @@ namespace OneKey
         /// <returns></returns>
         public static void AddType(string typeDes)
         {
-            string cmd = "instert into tb_PwdType(TypeDes,UserID) values ('" + typeDes + "','" + User.GetInstance().ID + "')";
+            string cmd = "insert into tb_PwdType(TypeDes,UserID) values ('" + typeDes + "','" + User.GetInstance().ID + "')";
 
             SQLUtil.ExecuteNoQuerySQL(cmd);
         }

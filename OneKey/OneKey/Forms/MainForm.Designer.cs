@@ -97,6 +97,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.pnlMsg.ResumeLayout(false);
             this.ResumeLayout(false);
 
