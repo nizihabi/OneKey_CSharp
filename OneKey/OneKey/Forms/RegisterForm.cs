@@ -13,6 +13,9 @@ namespace OneKey
     {
         Form parentForm;
 
+        private bool m_isIDok = false;
+        private bool m_isPwdok = false;
+       
         public RegisterForm(Form Parent)
         {
             InitializeComponent();
@@ -27,35 +30,63 @@ namespace OneKey
 
         private void btnReg_Click(object sender, EventArgs e)
         {
-            if (tbID.Text == "")
-            {
-                lblIDErro.Text = "UserID cannot be empty!";
-                lblIDErro.Visible = true;
-                return;
-            }
+            
                
             if (tbPwd.Text == "" || tbConfirm.Text == "")
             {
-                lblPwdErro.Text = "Password cannot be empty!";
+                lblPwdErro.Text = "Password Empty!";
                 lblPwdErro.Visible = true;
-                return;
+                m_isPwdok = false;
             }
+            else
+            {
+                if(m_isIDok && m_isPwdok)
+                {
+                    GlobleManager.RegisterUser(tbID.Text, tbPwd.Text);
+                    this.parentForm.Enabled = true;
+                    this.Close();
+                }
                 
-            if(GlobleManager.CheckIDExist(tbID.Text))
+            }
+          
+        }
+
+        private void tbID_TextChanged(object sender, EventArgs e)
+        {
+            if (tbID.Text == "")
             {
-                lblIDErro.Text = "UserID Has Existed";
+                lblIDErro.Text = "UserID Empty!";
                 lblIDErro.Visible = true;
-                return;
+                lblIDErro.ForeColor = Color.Red;
+                m_isIDok = false;
             }
-
-            if(tbPwd.Text != tbConfirm.Text )
+            else if(GlobleManager.CheckIDExist(tbID.Text) == true)
             {
-                lblPwdErro.Text = "Password cannot be empty!";
-                lblPwdErro.Visible = true;
-                return;
+                lblIDErro.Text = "UserID has Existed!";
+                lblIDErro.Visible = true;
+                lblIDErro.ForeColor = Color.Red;
+                m_isIDok = false;
             }
+            else
+            {
+                lblIDErro.Visible = false;
+                m_isIDok = true;
+            }
+        }
 
-            GlobleManager.RegisterUser(tbID.Text, tbPwd.Text);
+        private void tbConfirm_TextChanged(object sender, EventArgs e)
+        {
+            if (tbPwd.Text != tbConfirm.Text)
+            {
+                lblPwdErro.Text = "Password is Not Matched";
+                lblPwdErro.Visible = true;
+                lblPwdErro.ForeColor = Color.Red;
+            }
+            else
+            {
+                m_isPwdok = true;
+                lblPwdErro.Visible = false;
+            }
         }
     }
 }

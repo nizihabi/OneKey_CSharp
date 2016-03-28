@@ -59,6 +59,7 @@
             this.tbID.Name = "tbID";
             this.tbID.Size = new System.Drawing.Size(208, 34);
             this.tbID.TabIndex = 1;
+            this.tbID.TextChanged += new System.EventHandler(this.tbID_TextChanged);
             // 
             // lblPwd
             // 
@@ -99,16 +100,17 @@
             this.tbConfirm.Size = new System.Drawing.Size(208, 34);
             this.tbConfirm.TabIndex = 5;
             this.tbConfirm.UseSystemPasswordChar = true;
+            this.tbConfirm.TextChanged += new System.EventHandler(this.tbConfirm_TextChanged);
             // 
             // btnReg
             // 
             this.btnReg.BackColor = System.Drawing.Color.White;
             this.btnReg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnReg.FlatAppearance.BorderSize = 0;
+            this.btnReg.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnReg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReg.Font = new System.Drawing.Font("Segoe UI Light", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
             this.btnReg.ForeColor = System.Drawing.Color.Black;
-            this.btnReg.Image = ((System.Drawing.Image)(resources.GetObject("btnReg.Image")));
             this.btnReg.Location = new System.Drawing.Point(143, 304);
             this.btnReg.Name = "btnReg";
             this.btnReg.Size = new System.Drawing.Size(145, 49);
@@ -122,6 +124,7 @@
             this.btnCancel.BackColor = System.Drawing.Color.White;
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Light", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
