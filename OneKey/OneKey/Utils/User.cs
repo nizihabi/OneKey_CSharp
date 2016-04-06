@@ -7,12 +7,6 @@ using System.Data;
 namespace OneKey
 {
 
-    struct PwdInfo
-    {
-        string pwd;
-        string description;
-    }
-
     class User
     {
         public static User GetInstance()
@@ -56,7 +50,5 @@ namespace OneKey
             }
         }
 
-        public Queue<PwdInfo> Pwds;
-        public DataTable dt;
     }
 }

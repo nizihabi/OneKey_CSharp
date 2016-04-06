@@ -104,16 +104,18 @@
             // 
             // btnReg
             // 
-            this.btnReg.BackColor = System.Drawing.Color.White;
-            this.btnReg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReg.BackColor = System.Drawing.Color.Transparent;
+            this.btnReg.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReg.BackgroundImage")));
+            this.btnReg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReg.FlatAppearance.BorderSize = 0;
             this.btnReg.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnReg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReg.Font = new System.Drawing.Font("Segoe UI Light", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
             this.btnReg.ForeColor = System.Drawing.Color.Black;
-            this.btnReg.Location = new System.Drawing.Point(143, 304);
+            this.btnReg.Location = new System.Drawing.Point(135, 298);
             this.btnReg.Name = "btnReg";
-            this.btnReg.Size = new System.Drawing.Size(145, 49);
+            this.btnReg.Size = new System.Drawing.Size(180, 55);
             this.btnReg.TabIndex = 6;
             this.btnReg.Text = "Register";
             this.btnReg.UseVisualStyleBackColor = false;
@@ -121,16 +123,18 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.White;
-            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Light", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(143, 359);
+            this.btnCancel.Location = new System.Drawing.Point(135, 371);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(145, 49);
+            this.btnCancel.Size = new System.Drawing.Size(180, 50);
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -163,7 +167,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(450, 420);
+            this.ClientSize = new System.Drawing.Size(450, 433);
             this.Controls.Add(this.lblPwdErro);
             this.Controls.Add(this.lblIDErro);
             this.Controls.Add(this.btnCancel);

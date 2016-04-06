@@ -108,6 +108,20 @@ namespace OneKey
         }
 
         /// <summary>
+        /// 取出密码
+        /// </summary>
+        /// <param name="pwd"></param>
+        /// <param name="TypeDes"></param>
+        /// <returns></returns>
+        public static DataTable GetPwds(string pwd, string TypeDes)
+        {
+            int typeID = getTypeID(User.GetInstance().ID, TypeDes);
+            string cmd = "select Pwds,Description from tb_PwdInfo where UserID='" + User.GetInstance().ID + "' and Type=" + typeID ;
+            DataTable dt = SQLUtil.ExecuteQuerySQL(cmd);
+            return dt;
+        }
+
+        /// <summary>
         /// 增加新的类型
         /// </summary>
         /// <param name="userID">用户ID</param>

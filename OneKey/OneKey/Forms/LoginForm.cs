@@ -23,7 +23,7 @@ namespace OneKey
         /// <summary>
         /// 是否登陆成功
         /// </summary>
-        public bool LoginSunccess
+        public bool LoginSuccess
         {
             get { return loginSuccess; }
         }

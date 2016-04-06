@@ -16,9 +16,13 @@ namespace OneKey
 
         private string password;
 
+        private DataTable typesTable;
+        private DataTable pwdsTable;
+
         public MainForm()
         {
             InitializeComponent();
+            loadData();
         }
  
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -56,7 +60,7 @@ namespace OneKey
         {
             LoginForm login = new LoginForm();
             login.ShowDialog();
-            if (!login.LoginSunccess)
+            if (!login.LoginSuccess)
                 this.Close();
             else
             {
@@ -64,5 +68,20 @@ namespace OneKey
             }
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loadData()
+        {
+            typesTable.Clear();
+            typesTable = GlobleManager.LoadTypeData();
+        }
     }
 }
