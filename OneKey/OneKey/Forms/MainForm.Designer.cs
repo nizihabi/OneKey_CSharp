@@ -36,6 +36,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pnlMenu.SuspendLayout();
             this.pnlMsg.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,25 +45,26 @@
             // 
             this.lblLine01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblLine01.Image = ((System.Drawing.Image)(resources.GetObject("lblLine01.Image")));
-            this.lblLine01.Location = new System.Drawing.Point(240, 50);
+            this.lblLine01.Location = new System.Drawing.Point(216, 50);
             this.lblLine01.Name = "lblLine01";
-            this.lblLine01.Size = new System.Drawing.Size(13, 530);
+            this.lblLine01.Size = new System.Drawing.Size(10, 530);
             this.lblLine01.TabIndex = 0;
             // 
             // pnlMenu
             // 
+            this.pnlMenu.Controls.Add(this.label2);
             this.pnlMenu.Location = new System.Drawing.Point(0, 50);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(240, 530);
+            this.pnlMenu.Size = new System.Drawing.Size(210, 530);
             this.pnlMenu.TabIndex = 1;
             // 
             // pnlMsg
             // 
             this.pnlMsg.Controls.Add(this.lblType);
             this.pnlMsg.Controls.Add(this.label1);
-            this.pnlMsg.Location = new System.Drawing.Point(240, 50);
+            this.pnlMsg.Location = new System.Drawing.Point(228, 50);
             this.pnlMsg.Name = "pnlMsg";
-            this.pnlMsg.Size = new System.Drawing.Size(800, 530);
+            this.pnlMsg.Size = new System.Drawing.Size(812, 530);
             this.pnlMsg.TabIndex = 2;
             // 
             // lblType
@@ -115,6 +118,15 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // label2
+            // 
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
+            this.label2.Location = new System.Drawing.Point(226, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(14, 530);
+            this.label2.TabIndex = 5;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -132,6 +144,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.pnlMenu.ResumeLayout(false);
             this.pnlMsg.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -146,6 +159,7 @@
         private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label label2;
 
     }
 }

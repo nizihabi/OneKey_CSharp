@@ -1,4 +1,4 @@
-﻿namespace OneKey.Forms
+﻿namespace OneKey
 {
     partial class AddPwdForm
     {
@@ -38,6 +38,11 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnCanel = new System.Windows.Forms.Button();
             this.btnAddType = new System.Windows.Forms.Button();
+            this.pnlNewType = new System.Windows.Forms.Panel();
+            this.btnNewTypeCancel = new System.Windows.Forms.Button();
+            this.btnNewTypeADD = new System.Windows.Forms.Button();
+            this.tbNewType = new System.Windows.Forms.TextBox();
+            this.pnlNewType.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblPwd
@@ -98,6 +103,7 @@
             this.btnAdd.BackColor = System.Drawing.Color.Transparent;
             this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI Light", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
@@ -114,6 +120,7 @@
             this.btnCanel.BackColor = System.Drawing.Color.Transparent;
             this.btnCanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCanel.BackgroundImage")));
             this.btnCanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCanel.FlatAppearance.BorderSize = 0;
             this.btnCanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCanel.Font = new System.Drawing.Font("Segoe UI Light", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
@@ -139,13 +146,67 @@
             this.btnAddType.UseVisualStyleBackColor = false;
             this.btnAddType.Click += new System.EventHandler(this.btnTypeAdd_Click);
             // 
+            // pnlNewType
+            // 
+            this.pnlNewType.Controls.Add(this.btnNewTypeCancel);
+            this.pnlNewType.Controls.Add(this.btnNewTypeADD);
+            this.pnlNewType.Controls.Add(this.tbNewType);
+            this.pnlNewType.Location = new System.Drawing.Point(0, 212);
+            this.pnlNewType.Name = "pnlNewType";
+            this.pnlNewType.Size = new System.Drawing.Size(410, 148);
+            this.pnlNewType.TabIndex = 9;
+            this.pnlNewType.Visible = false;
+            // 
+            // btnNewTypeCancel
+            // 
+            this.btnNewTypeCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnNewTypeCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNewTypeCancel.BackgroundImage")));
+            this.btnNewTypeCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNewTypeCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNewTypeCancel.FlatAppearance.BorderSize = 0;
+            this.btnNewTypeCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewTypeCancel.Font = new System.Drawing.Font("Segoe UI Light", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.btnNewTypeCancel.Location = new System.Drawing.Point(266, 85);
+            this.btnNewTypeCancel.Name = "btnNewTypeCancel";
+            this.btnNewTypeCancel.Size = new System.Drawing.Size(75, 29);
+            this.btnNewTypeCancel.TabIndex = 2;
+            this.btnNewTypeCancel.Text = "Cancel";
+            this.btnNewTypeCancel.UseVisualStyleBackColor = false;
+            this.btnNewTypeCancel.Click += new System.EventHandler(this.btnNewTypeCancel_Click);
+            // 
+            // btnNewTypeADD
+            // 
+            this.btnNewTypeADD.BackColor = System.Drawing.Color.Transparent;
+            this.btnNewTypeADD.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNewTypeADD.BackgroundImage")));
+            this.btnNewTypeADD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNewTypeADD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNewTypeADD.FlatAppearance.BorderSize = 0;
+            this.btnNewTypeADD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewTypeADD.Font = new System.Drawing.Font("Segoe UI Light", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.btnNewTypeADD.Location = new System.Drawing.Point(60, 85);
+            this.btnNewTypeADD.Name = "btnNewTypeADD";
+            this.btnNewTypeADD.Size = new System.Drawing.Size(75, 29);
+            this.btnNewTypeADD.TabIndex = 1;
+            this.btnNewTypeADD.Text = "ADD";
+            this.btnNewTypeADD.UseVisualStyleBackColor = false;
+            this.btnNewTypeADD.Click += new System.EventHandler(this.btnNewTypeADD_Click);
+            // 
+            // tbNewType
+            // 
+            this.tbNewType.Font = new System.Drawing.Font("Segoe UI Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.tbNewType.Location = new System.Drawing.Point(60, 34);
+            this.tbNewType.Name = "tbNewType";
+            this.tbNewType.Size = new System.Drawing.Size(281, 27);
+            this.tbNewType.TabIndex = 0;
+            // 
             // AddPwdForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(410, 497);
+            this.ClientSize = new System.Drawing.Size(410, 500);
+            this.Controls.Add(this.pnlNewType);
             this.Controls.Add(this.btnAddType);
             this.Controls.Add(this.btnCanel);
             this.Controls.Add(this.btnAdd);
@@ -158,6 +219,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddPwdForm";
             this.Text = " ";
+            this.pnlNewType.ResumeLayout(false);
+            this.pnlNewType.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +237,9 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnCanel;
         private System.Windows.Forms.Button btnAddType;
+        private System.Windows.Forms.Panel pnlNewType;
+        private System.Windows.Forms.Button btnNewTypeCancel;
+        private System.Windows.Forms.Button btnNewTypeADD;
+        private System.Windows.Forms.TextBox tbNewType;
     }
 }

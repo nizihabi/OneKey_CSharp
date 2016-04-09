@@ -75,12 +75,18 @@ namespace OneKey
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            AddPwdForm addpwd = new AddPwdForm(this);
+            int Xoffset = (this.Size.Width - addpwd.Size.Width) / 2;
+            int Yoffset = (this.Size.Height - addpwd.Size.Height) / 2;
+            addpwd.Location = new Point(this.Location.X + Xoffset, this.Location.Y + Yoffset);
+            addpwd.Show();
+            this.Enabled = false;
         }
 
         private void loadData()
         {
-            typesTable.Clear();
+            if (typesTable != null && typesTable.Rows.Count > 0)
+                typesTable.Clear();
             typesTable = GlobleManager.LoadTypeData();
         }
     }
