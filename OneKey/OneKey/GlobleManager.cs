@@ -24,7 +24,7 @@ namespace OneKey
             string createTable = "create table if not exists tb_User(UserID nvarchar(50) not null primary key, Password nvarchar(50) not null);"; 
             SQLUtil.ExecuteNoQuerySQL(createTable);
             createTable = @"create table if not exists tb_PwdInfo(
-                                PwdID int identity(1,1) primary key,
+                                PwdID integer PRIMARY KEY autoincrement,
                                 UserID nvarchar(50) not null, 
                                 Pwds nvarchar(50) not null,
                                 Description nvarchar(200) null,
@@ -33,7 +33,7 @@ namespace OneKey
             SQLUtil.ExecuteNoQuerySQL(createTable);
 
             createTable = @"create table if not exists tb_PwdType(
-                                TypeID int identity(1,1) primary key,
+                                TypeID integer PRIMARY KEY autoincrement,
                                 TypeDes nvarchar(200) not null, 
                                 UserID nvarchar(50) not null
                                 );";
@@ -157,7 +157,8 @@ namespace OneKey
             DataTable dt = SQLUtil.ExecuteQuerySQL(cmd);
             if (dt == null)
                 return -1;
-            return Int32.Parse(dt.Rows[0]["TypeID"].ToString());
+            string look = dt.Rows[0]["TypeID"].ToString();
+            return Int32.Parse(look);
         }
     }
 }

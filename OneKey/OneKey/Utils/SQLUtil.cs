@@ -118,6 +118,7 @@ namespace DataUtil
             SQLiteCommand cmd = new SQLiteCommand(sqlStr, connection);
             SQLiteDataReader reader = cmd.ExecuteReader();
             bool result = reader.HasRows;
+            reader.Close();
             connection.Close();
             return result;
         }

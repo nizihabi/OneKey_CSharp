@@ -22,7 +22,7 @@ namespace OneKey
         public MainForm()
         {
             InitializeComponent();
-            loadData();
+          //  loadData();
         }
  
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
